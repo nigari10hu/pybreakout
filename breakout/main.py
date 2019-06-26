@@ -10,20 +10,14 @@ from myFunc import*
 #drawWindowの中身を描く
 #collision系の関数を呼ぶ
 
-#ブロッククラス
-class Block:
-    #色
-    color=(255,0,0)
-    #壊されたか
-    breaked=False
-    #コンストラクタ#色を設定
-    def __init__(self,col=(255,0,0)):
-        self.color=col
-
 #グローバル変数
 
-#ブロックの二次元配列
-block = [[Block((255,0,0)) for i in range(10)]for j in range(10)]
+#ブロック
+#色
+block = [[(255,0,0) for i in range(10)] for j in range(10)]
+#壊れたか
+breaked=[[False for i in range(10)] for j in range(10)]
+
 #ボールの座標、半径
 boll_x = 200
 boll_y = 340
@@ -48,7 +42,11 @@ def gameInit():
     global boll_spead
     boll_spead=3
     global block
-    block=[[Block()for i in range(10)]for j in range(10)]
+    block = [[(255,0,0) for i in range(10)] for j in range(10)]
+    global breaked
+    breaked=[[False for i in range(10)] for j in range(10)]
+
+   
 
 #描画
 def drawWindow(screen):
@@ -61,8 +59,8 @@ def drawWindow(screen):
     #ブロックを描画
     for y in range(10):
         for x in range(10):
-            if not block[y][x].breaked:
-                pygame.draw.rect(screen,block[y][x].color,(40*x,20*y,39,19))
+            if not breaked[y][x]:
+                pygame.draw.rect(screen,block[y][x],(40*x,20*y,39,19))
 
 #更新
 def update():
@@ -89,7 +87,7 @@ def block_collision():
     for y in range(10):
         for x in range(10):
             #壊されていないなら
-            if not block[y][x].breaked:
+            if not breaked[y][x]:
                 #collision(ボール座標,ボール半径、長方形(座標、高さ幅))
                 coll,xy = collision((boll_x,boll_y),boll_r,(40*x,20*y,39,19))
                 if coll:
@@ -102,7 +100,7 @@ def block_collision():
                     #boll_spead*=1.001
                     #if boll_spead>=10:
                         #boll_spead=10
-                    block[y][x].breaked=True
+                    breaked[y][x]=True
                     break
         #2重ループを抜ける
         else:

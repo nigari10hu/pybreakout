@@ -51,6 +51,7 @@ while b==True:
 ---
 pygameをインストールする
 ```
+コマンドプロントで
 pip install pygame
 ```
 ---

@@ -67,7 +67,7 @@ RGB=赤、緑、青
 +++
 バーの長さを変える
 ```
-bar_length = 60
+bar_length=60
 ```
 ```
 bar_length=120

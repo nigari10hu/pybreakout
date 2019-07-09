@@ -1,5 +1,6 @@
 # pybreakout
-
+---
+pythonの書き方
 ---
 変数
 ```
@@ -45,21 +46,28 @@ while b==True:
   ...
 ```
 ---
+pybreakoutのコードを書き換える
++++
 ブロックのいろを変える
 ```
 color=[[(255,0,0) for i in range(10)] for j in range(10)]
-
+```
+```
 color=[[(0,255,0)] for i in range(10)] for j in range(10)]
-
 ```
 RGB=赤、緑、青
 +++
 バーの長さを変える
 ```
 bar_length = 60
-
-bar_length=120
-
 ```
+```
+bar_length=120
+```
+---
+pygameの使い方
++++
+
++++
 ---
 終わり

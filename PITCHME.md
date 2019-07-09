@@ -120,6 +120,7 @@ pygameの使い方
 ---
 pygameの関数リファレンス(英語)
 https://www.pygame.org/docs/
+
 (日本語訳)
 http://westplain.sakuraweb.com/translate/pygame/
 +++

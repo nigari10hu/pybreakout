@@ -5,13 +5,16 @@ pythonの書き方
 変数
 ```
 hoge=0
+```
+```
 hogehoge="aiueo"
 ```
 +++
 配列
 ```
 hoge=[1,2,3,4,5]
-
+```
+```
 hogehoge=[i for i in range(5)]
 ```
 +++

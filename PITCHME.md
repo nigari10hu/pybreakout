@@ -80,16 +80,19 @@ pygameの使い方
     pygame.display.set_caption("Test")
 ```
 +++
-ループ
+描画
 ```
-    while True:
-        #画面を黒色(#000000)に塗りつぶし
-        screen.fill((0,0,0))
-        #描画
-        ...
-        #画面を更新
-        pygame.display.update()
-        #イベント処理
+  #画面を黒色(#000000)に塗りつぶし
+  screen.fill((0,0,0))
+  #描画
+  ...
+  #画面を更新
+  pygame.display.update()
+```
++++
+イベント
+```
+ #イベント処理
         for event in pygame.event.get():
             #閉じるボタンが押されたら終了
             if event.type == QUIT:
@@ -100,7 +103,6 @@ pygameの使い方
             if event.type==KEYDOWN:
                 if event.key==K_SPACE:
                   ...
-
 ```
 +++
 ```
@@ -108,6 +110,6 @@ pygameの使い方
   pygame.draw.circle(screen,(255,255,255),(int(boll_x),int(boll_y)),boll_r)
   #しかく
   pygame.draw.rect(screen,(255,255,255),(bar_x,380,bar_length,10))
-  ```
+```
 ---
 終わり

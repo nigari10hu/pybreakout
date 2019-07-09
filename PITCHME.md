@@ -49,6 +49,11 @@ while b==True:
   ...
 ```
 ---
+pygameをインストールする
+```
+pip install pygame
+```
+---
 pybreakoutのコードを書き換える
 +++
 ブロックのいろを変える
@@ -106,10 +111,19 @@ pygameの使い方
 ```
 +++
 ```
-  # まる
-  pygame.draw.circle(screen,(255,255,255),(int(boll_x),int(boll_y)),boll_r)
-  #しかく
-  pygame.draw.rect(screen,(255,255,255),(bar_x,380,bar_length,10))
+  # 円を描画
+  pygame.draw.circle(screen,(255,255,255),(x,y),r)
+  #四角を描画
+  pygame.draw.rect(screen,(255,255,255),(x,y,width,height))
 ```
+---
+pygameの関数リファレンス(英語)
+https://www.pygame.org/docs/
+(日本語訳)
+http://westplain.sakuraweb.com/translate/pygame/
++++
+チュートリアルっぽいサイト
+https://algorithm.joho.info/programming/python/pygame/
+https://riptutorial.com/ja/pygame
 ---
 終わり

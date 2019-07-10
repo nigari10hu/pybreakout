@@ -135,6 +135,8 @@ for event in pygame.event.get():
              ...
 ```
 ---
+参考になるサイト
++++
 pygameの関数リファレンス(英語)
 https://www.pygame.org/docs/
 
@@ -144,5 +146,7 @@ http://westplain.sakuraweb.com/translate/pygame/
 チュートリアルっぽいサイト
 https://algorithm.joho.info/programming/python/pygame/
 https://riptutorial.com/ja/pygame
++++
+分からなくなったらとりあえずググろう！
 ---
 終わり

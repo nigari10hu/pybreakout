@@ -9,6 +9,7 @@ hoge=0
 ```
 hogehoge="aiueo"
 ```
+
 +++
 配列
 ```
@@ -17,6 +18,7 @@ hoge=[1,2,3,4,5]
 ```
 hogehoge=[i for i in range(5)]
 ```
+pythonの配列はリストです
 +++
 関数
 ```
@@ -27,31 +29,38 @@ def foo():
 条件分岐
 ```
 if a>0:
-  ...
- 
+  print("a>0")
+```
+```
 if a>0 or b<0:
-  ...
-
+  print("a>0 または b<0")
+```
+```
 if not a==0:
-  ...
+  print(aは0でない)
 ```
 +++
 ループ
 ```
 for i in range(10):
-  ...
-
+  print(i)
+```
+10回ループします
+```
 a=[1,2,3,4,5]
 for i in a:
-  ...
-
+  print(i)
+```
+iに順にaの要素が入ります(5回ループ)
+```
 while b==True:
   ...
 ```
+bが真なら繰り返します
 ---
 pygameをインストールする
 ```
-コマンドプロントで
+//コマンドプロントで
 pip install pygame
 ```
 ---
@@ -91,12 +100,21 @@ pygameの使い方
   #画面を黒色(#000000)に塗りつぶし
   screen.fill((0,0,0))
   #描画
-  ...
+  #円を描画
+  pygame.draw.circle(screen,(255,255,255),(x,y),r)
   #画面を更新
   pygame.display.update()
 ```
 +++
-イベント
+円と四角
+```
+  # 円を描画
+  pygame.draw.circle(screen,(255,255,255),(x,y),r)
+  #四角を描画
+  pygame.draw.rect(screen,(255,255,255),(x,y,width,height))
+```
++++
+キー入力イベント
 ```
  #イベント処理
         for event in pygame.event.get():
@@ -109,13 +127,6 @@ pygameの使い方
             if event.type==KEYDOWN:
                 if event.key==K_SPACE:
                   ...
-```
-+++
-```
-  # 円を描画
-  pygame.draw.circle(screen,(255,255,255),(x,y),r)
-  #四角を描画
-  pygame.draw.rect(screen,(255,255,255),(x,y,width,height))
 ```
 ---
 pygameの関数リファレンス(英語)

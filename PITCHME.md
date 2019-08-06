@@ -69,6 +69,7 @@ pip install pygame
 ```
 ---
 pybreakoutのコードを書き換える
+https://github.com/nigari10hu/pybreakout
 +++
 ブロックのいろを変える
 ```
